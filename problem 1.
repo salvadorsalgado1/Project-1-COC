@@ -28,7 +28,17 @@ public class JavaApplication2 {
         
     }
 
-     public long        
+           public static int powerTwo(int pn, int total)   
+        {
+                 
+            if (pn==0)
+            
+            return 1;
+            
+            else 
+            return 3;
+                
+        }
         
 }
     
