@@ -1,0 +1,45 @@
+
+package problem2;
+import java.util.*;
+
+/**
+ *
+ * @author Salvador
+ */
+public class Problem2 {
+    
+        //double n;
+        double x;
+        public double DoHarmonic(double n)
+        {
+            
+            //n = input.nextDouble();
+            
+            if (n == 1.0)
+                
+                return 1.0;
+                
+                else
+                {
+                    return x = (1.0/n) + DoHarmonic(n-1.0);
+                 
+                }
+
+        }
+            public static void main(String[] args) 
+        {       
+        Problem2 dh = new Problem2();
+      Scanner input = new Scanner (System.in);
+        System.out.print("Enter your number: ");
+        double n = input.nextInt();
+        
+        
+        System.out.print(dh.DoHarmonic(n));
+        
+        
+        }
+            
+   
+        
+        
+}
