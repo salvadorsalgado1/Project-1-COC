@@ -1,45 +1,45 @@
-
-package javaapplication2;
+package Problem1;
 import java.util.*;
 import javax.swing.*;
 
-public class JavaApplication2 {
-
-   
-    public static void main(String[] args) {
-    Scanner input = new Scanner (System.in);
-        int n =3;
-        int total = 1;
+public class Problem1 {
+Scanner input = new Scanner(System.in);
+   int n;
+   int x;
+   int total = 1;
+  
+         public int power1()
+         {
+         System.out.print("enter power 1:  ");
+         n = input.nextInt();  
         
-        System.out.print("Enter your N ");
-        n = input.nextInt();
-       
+         
+         
+        // for (int i = 1; i<n; i++  )
+                        
+                            total = (n*n)  ;
+                    System.out.print(total);                       
+                          return total;                        
+         }
         
-        for(int i = 1; i<= n; i++){
-       
-            
-            total = total * n;
-                
-                    }
-        
-        System.out.print(total);
-        
-        System.out.print("Now to calculate answer recursevely. /n/n Enter your number: ");
-        
-    }
-
-           public static int powerTwo(int pn, int total)   
-        {
-                 
-            if (pn==0)
-            
-            return 1;
-            
+         public int power2()
+        {              
+           System.out.print("\n\nEnter power 2:  ");
+         n = input.nextInt();
+            if (n == 0)
+                return 1;
             else 
-            return 3;
-                
+               
+          return total = n * n;
+    
         }
-        
-}
+   
+    public static void main(String[] args)
+    {
+        Problem1 r = new Problem1();
+        r.power1();
+       r.power2();
+      
+    }
     
     
