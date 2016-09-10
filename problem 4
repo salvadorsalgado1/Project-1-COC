@@ -1,0 +1,109 @@
+
+package problem4;
+import java.util.*;
+/**
+ *
+ * @author Salvador
+ */
+public class Problem4 {
+
+   Scanner input = new Scanner(System.in);
+
+       private String fname;
+       private String lname;
+       private long accnum;
+       private String duedate;
+       private int rewardpoints;
+       private double balance;
+       char payment;
+       int user;
+       double cashadv;
+       double n;
+    public static void main(String[] args) {
+        
+        
+        
+      Problem4 cc = new Problem4(); 
+      cc.CreditCard();
+      Problem4 bankaccnum = new Problem4();
+      bankaccnum.Bank();
+        Problem4 pynt = new Problem4();
+        pynt.makePayment();
+       Problem4 cashadv = new Problem4();
+        cashadv.cashAdvance();
+    }
+    public void Bank()
+    {
+       System.out.print("Welcome to Sal's Bank. "
+               + "\nPlease enter your first name: ");
+       fname = input.next();
+       System.out.print("Please enter your last name: ");
+       lname = input.next();
+               
+        System.out.print("Hello" +" "+ fname +" "+ lname +". "+ "Please enter your account number: ");
+        accnum = input.nextLong();
+      
+    }
+   public double getBalance()
+   {
+       return balance;
+   }
+    
+    
+    public void CreditCard()
+    {
+       balance = 500;
+   
+        
+    }
+    
+    public void charge()
+    {
+        
+        
+    }
+    public void cashAdvance()
+    {
+       balance = 500 - n;
+    }
+    
+    public void makePayment()
+    {
+        System.out.print("Select an option:"
+                + " \n1 - View balance."
+                + "\n2 - Make a payment."
+                + "\n3 - View rewards. "
+                + "\n>>");
+       
+        user = input.nextInt();
+        switch (user)
+        {
+            case 1:  System.out.print("Details: " +"\n" +"\n" +"Current balance: " + fname );
+                break;
+            
+            
+            case 2: 
+            n = input.nextDouble();
+            cashAdvance();
+           System.out.print(balance);
+            break;
+            
+            
+            case 3:System.out.print("you pressed 3");
+                break;
+           
+            default: System.out.print("default");
+            
+            break;
+        }
+    }
+    
+    public void addInterest()
+    {
+        
+        
+    }
+    
+    
+    
+}
