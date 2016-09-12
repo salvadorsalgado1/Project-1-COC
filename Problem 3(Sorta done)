@@ -1,0 +1,71 @@
+
+
+
+
+package problem3;
+import java.util.*;
+
+
+ // @author Salvador
+ 
+public class Problem3 {
+Scanner input = new Scanner(System.in);
+
+
+
+
+    
+    public static void main(String[] args) {
+     
+        
+        
+        System.out.print("By adding 1,2,3, we get 6.");
+        Problem3 add = new Problem3();
+        
+        
+     
+    
+     
+      
+     //List <Integer> aList = new ArrayList <>();
+      // ArrayList();
+      List aList = Arrays.asList();
+
+
+       
+    }
+
+    public int addList(List aList)
+      {
+             int a,b,c, d;
+     a = 1;
+     b = 2;
+     c = 3;
+     d = a + b + c; 
+          int [] nums = new int [] {a,b,c,d};
+          
+      System.out.print(Arrays.toString(nums));
+          return 1;
+      }
+    
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
