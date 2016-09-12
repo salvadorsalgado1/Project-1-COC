@@ -1,0 +1,60 @@
+ package problem1;
+import java.util.*;
+
+/**
+ *
+ * @author Salvador
+ */
+public class Problem1 {
+    Scanner input = new Scanner (System.in);
+        int x;
+        int user;
+          
+        public int power1(int b,int e)
+        {
+           // b = input.nextInt();
+            
+           // e = input.nextInt();
+            return b = (int) Math.pow(b,e);
+        }
+        
+        public int power2(int n,int p)
+        {
+        
+            if (p == 0)
+                
+                return 1;
+                
+                else
+                
+                 return  n * power2(n,p-1);
+                 
+        }
+         
+        
+        public static void main(String[] args) 
+        {       
+        Problem1 dh = new Problem1();
+       
+      Scanner input = new Scanner (System.in);
+        System.out.print("Recursion"+"\n"+"Enter your base: ");
+        int n = input.nextInt();
+        System.out.print("Enter your exponent: ");
+        int p = input.nextInt();
+        
+        
+         System.out.print("\n\n\n");
+         System.out.print(dh.power2(n,p));
+       System.out.print("\n");
+      
+      System.out.print("Iterative"+"\n"+ "Enter your base: ");
+       int b = input.nextInt();
+       System.out.print("\nEnter your exponent: ");
+       int e = input.nextInt();
+       System.out.print(dh.power1(b, e));
+       
+       
+        }
+
+
+}
