@@ -9,6 +9,7 @@ public class Problem4 {
 
    Scanner input = new Scanner(System.in);
 
+
        private String fname;
        private String lname;
        private long accnum;
@@ -22,8 +23,17 @@ public class Problem4 {
       private int ccnumber = 9094;
      private double interestrate = .1145;
      private double interestamt;
-    
+      
+     int a,b,c;
+     int d = 1;
      
+     double [] doubs = new double [] {balance, interestrate, interestamt};
+     int [] nums = new int [] {user,rewardpoints};
+      List aList = Arrays.asList();
+String [] strs = new String [] {fname,lname,duedate,};
+
+List bList = Arrays.asList();
+List cList = Arrays.asList();
     public static void main(String[] args) {
         
      
@@ -33,7 +43,8 @@ public class Problem4 {
       
       Problem4 m = new Problem4();
         m.menu();
-     
+     Problem4 to = new Problem4();
+//     to.addList();
         
         Problem4 cashadv = new Problem4();
         cashadv.cashAdvance();
@@ -66,13 +77,16 @@ public class Problem4 {
     {
      
        CreditCard();
-             
+              System.out.print("\n");
+            System.out.print(Arrays.toString(doubs));
+                System.out.print("\n");
+                       System.out.print(Arrays.toString(nums));
+                       System.out.print("\n");
+            System.out.print(Arrays.toString(strs));
+            System.out.print("\n");
                menu();
        
     }
-  
-   
-    
     public void CreditCard()
     {
        System.out.print("\n\n- Marriot Rewards Visa Credit Card - "
@@ -84,10 +98,11 @@ public class Problem4 {
                + "\n"              
                + "XXXX-XXXX-XXXX-"
                + ccnumber);
-           String [] List = new String [] {fname,lname};
-       List aList = Arrays.asList();
-      System.out.print(Arrays.toString(List));
-       
+//           String [] List = new String [] {fname,lname};
+//       List aList = Arrays.asList();
+//      System.out.print(Arrays.toString(List));
+//      // List bList = Arrays.bsList();
+//      // System.out.print(Arrays.toString(List));
     }    
     
     public void charge()
@@ -145,9 +160,12 @@ public class Problem4 {
                 + "\n5 - Customer Details."
                 + "\n6 - Balance payment."
                 + "\n7 - End Session."
+   
                 + "\n>> ");
        
         user = input.nextInt();
+        
+       
         switch (user)
         {
             case 1:  System.out.print("Details: " +"\n" +"\n" +"Current balance: ");
@@ -175,7 +193,15 @@ public class Problem4 {
             break;
            
             case 5: display();
-                       menu();
+//                       System.out.print("\n");
+//            System.out.print(Arrays.toString(doubs));
+//                System.out.print("\n");
+//                       System.out.print(Arrays.toString(nums));
+//                       System.out.print("\n");
+//            System.out.print(Arrays.toString(strs));
+//            System.out.print("\n");
+            
+            menu();
                     break; 
             case 6: makePayment();
                      menu();
@@ -183,6 +209,7 @@ public class Problem4 {
                 
             case 7: System.exit(0);
                      break;
+           
             
             default: System.out.print("default");
             
@@ -197,6 +224,15 @@ public class Problem4 {
         System.out.print(interestamt);
     }
  
-    
-    
+    public int addList(List aList)
+      {
+      
+          return 1;
+      }
+    public int adList (List bList)
+    {
+       
+       return 1;
+    }
 }
+
