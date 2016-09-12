@@ -12,98 +12,175 @@ public class Problem4 {
        private String fname;
        private String lname;
        private long accnum;
-       private String duedate;
-       private int rewardpoints;
-       private double balance;
+       private String duedate = "December 31, 2016";
+       private int rewardpoints = 3000;
+       private double balance = 500;
        char payment;
        int user;
        double cashadv;
        double n;
+      private int ccnumber = 9094;
+     private double interestrate = .1145;
+     private double interestamt;
+     
+     
     public static void main(String[] args) {
         
-        
-        
-      Problem4 cc = new Problem4(); 
-      cc.CreditCard();
+     
       Problem4 bankaccnum = new Problem4();
       bankaccnum.Bank();
-        Problem4 pynt = new Problem4();
-        pynt.makePayment();
-       Problem4 cashadv = new Problem4();
+       
+      
+      Problem4 m = new Problem4();
+        m.menu();
+     
+        
+        Problem4 cashadv = new Problem4();
         cashadv.cashAdvance();
+      Problem4 ch = new Problem4();
+      ch.charge();
+     
+    Problem4 cc = new Problem4(); 
+      cc.CreditCard();
     }
+   
+    
     public void Bank()
     {
        System.out.print("Welcome to Sal's Bank. "
                + "\nPlease enter your first name: ");
        fname = input.next();
+      
        System.out.print("Please enter your last name: ");
        lname = input.next();
                
         System.out.print("Hello" +" "+ fname +" "+ lname +". "+ "Please enter your account number: ");
         accnum = input.nextLong();
-      
     }
    public double getBalance()
    {
+       System.out.print(balance);    
        return balance;
    }
-    
+   private void display()
+    {
+     
+       CreditCard();
+             //getfName();
+               menu();
+       
+    }
+  
+   
     
     public void CreditCard()
     {
-       balance = 500;
-   
-        
-    }
+       System.out.print("\n\n- Marriot Rewards Visa Credit Card - "
+               + "\n"
+               + "Type: Credit"
+               + "\n"
+               + "Available reward points: "
+               + rewardpoints
+               + "\n"              
+               + "XXXX-XXXX-XXXX-"
+               + ccnumber);
+           
+    }    
     
     public void charge()
     {
-        
-        
+       System.out.print("Enter your amount of deposit: ");
+       
+       n = input.nextDouble();
+       if (balance + n <= 500)
+       balance = balance + n;
+       
+       else 
+           System.out.print("Your credit is fully paid: ");
+       System.out.print("\n\nNew Balance: " + balance);
+       
+       
+       menu();       
     }
-    public void cashAdvance()
-    {
-       balance = 500 - n;
-    }
-    
     public void makePayment()
     {
-        System.out.print("Select an option:"
-                + " \n1 - View balance."
-                + "\n2 - Make a payment."
-                + "\n3 - View rewards. "
-                + "\n>>");
+        
+        
+    }   
+    public void cashAdvance()
+    {
+     System.out.print("Withdrawal amount: ");
+        n = input.nextDouble();
+    balance = 500 - n;
+        System.out.print("New Balance : " + balance);
+        if (balance <= 0)
+       System.out.print("\n\nYou have exceeded your credit available...");
+        else System.out.print("\nSuccess...");
+            
+        System.out.print("\n\n"+"Please add " +(500-balance) + " before "
+                + duedate);
+        menu();
+                
+    }   
+    
+    public void menu()
+    {
+        System.out.print("\n\n\nSelect an option:"
+                + " \n1 - View Balance."
+                + "\n2 - Cash Advance."
+                + "\n3 - View Rewards. "
+                + "\n4 - Make a Payment."
+                + "\n5 - Customer Details."
+                + "\n6 - "
+                + "\n7 - End Session."
+                + "\n>> ");
        
         user = input.nextInt();
         switch (user)
         {
-            case 1:  System.out.print("Details: " +"\n" +"\n" +"Current balance: " + fname );
+            case 1:  System.out.print("Details: " +"\n" +"\n" +"Current balance: ");
+               
+                getBalance();
+               System.out.print("\nInterest owed: ");
+                addInterest();
+                menu();
+                
                 break;
-            
-            
+                       
             case 2: 
-            n = input.nextDouble();
+           // n = input.nextDouble();
             cashAdvance();
-           System.out.print(balance);
-            break;
-            
-            
+           //System.out.print(balance);
+                    break;
+                       
             case 3:System.out.print("you pressed 3");
-                break;
+                    break;
            
+            case 4: charge();
+                    break;
+           
+            case 5: display();
+                       
+                    break; 
+            case 6:
+                     break;
+                
+            case 7: System.exit(0);
+                     break;
+            
             default: System.out.print("default");
             
-            break;
+                      break;
         }
     }
     
     public void addInterest()
     {
-        
-        
+        //Interest rate @ 11.45%
+        interestamt = (500 - balance) * interestrate;
+        System.out.print(interestamt);
     }
-    
+ 
     
     
 }
