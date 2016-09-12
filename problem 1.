@@ -30,7 +30,7 @@ Scanner input = new Scanner(System.in);
                 return 1;
             else 
                
-          return total = n * n;
+          return total = n *n;
     
         }
    
@@ -41,5 +41,12 @@ Scanner input = new Scanner(System.in);
        r.power2();
       
     }
-    
-    
+   
+   
+   
+   
+   
+   
+   
+   
+}
